@@ -1,0 +1,51 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Annonce index{% endblock %}
+
+{% block body %}
+    <h1>Annonce index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for annonce in annonces %}
+        <div class="tm-top-d-box">
+            <div class="uk-container uk-container-center">
+                <section id="tm-top-d" class="tm-top-d uk-grid" data-uk-grid-match="{target:'> div > .uk-panel'}" data-uk-grid-margin="">
+                    <div class="uk-width-1-1">
+                        <div class="uk-panel">
+                            <div class="donate-wrap">
+                                <div class="donate-inner">
+                                    <h3><span>{{annonce.id}}</h3>
+                                    <div class="uk-grid">
+                                        <div class="uk-width-8-10 uk-push-1-10 intro-text">
+                                            {{ annonce.content }} 
+                                        </div>
+                                    </div>
+                                    <br><br>                                   
+                                    <form action="">
+                                        <button class="donate-btn" type="submit" name="submit"><span><a href="{{ path('annonce_edit', {'id': annonce.id}) }}">Modifier</a></span> </button>
+                                        <button class="donate-btn" type="submit" name="submit"><span><a href="{{ path('annonce_delete', {'id': annonce.id}) }}">Supprimer</a></span> </button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        {% else %}
+            <tr>
+                <td colspan="2">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('annonce_new') }}">Create new</a>
+{% endblock %}

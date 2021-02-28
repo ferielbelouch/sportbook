@@ -1,0 +1,35 @@
+{% extends 'base_auth.html.twig' %}
+
+{% block title %}Register{% endblock %}
+{% block header %}
+    <div class="tm-top-a-box tm-full-width  ">
+		<div class="uk-container uk-container-center">
+            <section id="tm-top-a" class="tm-top-a uk-grid uk-grid-collapse" data-uk-grid-match="{target:'> div > .uk-panel'}" data-uk-grid-margin="">
+                <img  src="images/main-slider-img.jpg" alt="" style="opacity:0.8"> 
+                    <div class="uk-position-cover uk-flex uk-flex-center uk-flex-middle inner">
+                        <div class="card" style="background-color:grey; padding:80px; border-radius:15px;">
+                            {% for flashError in app.flashes('verify_email_error') %}
+                            <div class="alert alert-danger" role="alert">{{ flashError }}</div>
+                            {% endfor %}
+
+                            <h1>Register</h1>
+
+                            {{ form_start(registrationForm) }}
+                                {{ form_row(registrationForm.email) }}
+                                {{ form_row(registrationForm.plainPassword, {
+                                    label: 'Password'
+                                }) }}
+                                {{ form_row(registrationForm.agreeTerms) }}
+
+                                <button type="submit" class="btn">Register</button>
+                            {{ form_end(registrationForm) }}
+                            
+                        </div>
+                    </div>
+            </section>
+        </div>
+    </div>
+{% endblock %}
+{% block body %}
+    
+{% endblock %}
