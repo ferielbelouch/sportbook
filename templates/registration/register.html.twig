@@ -1,13 +1,128 @@
-{% extends 'base_auth.html.twig' %}
+{% extends 'base.html.twig' %}
 
 {% block title %}Register{% endblock %}
-{% block header %}
-    <div class="tm-top-a-box tm-full-width  ">
-		<div class="uk-container uk-container-center">
-            <section id="tm-top-a" class="tm-top-a uk-grid uk-grid-collapse" data-uk-grid-match="{target:'> div > .uk-panel'}" data-uk-grid-margin="">
-                <img  src="images/main-slider-img.jpg" alt="" style="opacity:0.8"> 
-                    <div class="uk-position-cover uk-flex uk-flex-center uk-flex-middle inner">
-                        <div class="card" style="background-color:grey; padding:80px; border-radius:15px;">
+
+
+
+{% block body %}
+
+		<div class="sportsmagazine-main-content">
+
+			<!--// Main Section \\-->
+			<div class="sportsmagazine-main-section sportsmagazine-account-full">
+				<div class="container">
+					<div class="row">
+                        	<div class="col-md-12">
+                            <!--// Tabs \\-->
+                            <div class="sportsmagazine-account-tabs">
+                              <!-- Nav tabs -->
+                              <ul class="nav-tabs" role="tablist">
+                                <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Première étape</a></li>
+                                <li role="presentation"><a href="#shiping" aria-controls="shiping" role="tab" data-toggle="tab">Deuxième étape</a></li>
+                                <li role="presentation"><a href="#billing" aria-controls="billing" role="tab" data-toggle="tab">Troisième étape</a></li>
+                              </ul>
+
+                              <!-- Tab panes -->
+                              <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active" id="home">
+                                    <div class="sportsmagazine-account">
+                                        <form>
+                                            <ul>
+                                                <li>
+                                                    <label>Votre Discipline</label>
+                                                    <input value="Enter here" onblur="if(this.value == '') { this.value ='Enter here'; }" onfocus="if(this.value =='Enter here') { this.value = ''; }" type="email">
+                                                </li>
+                                                <li>
+                                                    <input value="Continuers" type="submit">
+                                                </li>
+                                            </ul>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div role="tabpanel" class="tab-pane" id="shiping">
+                                    <div class="sportsmagazine-account">
+                                        <form>
+                                            <ul>
+                                                <li>
+                                                    <label>Qui êtes-vous ?</label>
+                                                    <input value="Enter here" onblur="if(this.value == '') { this.value ='Enter here'; }" onfocus="if(this.value =='Enter here') { this.value = ''; }" type="email">
+                                                </li>
+                                                <li>
+                                                    <input value="continuer" type="submit">
+                                                </li>
+                                            </ul>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div role="tabpanel" class="tab-pane" id="billing">
+                                    <div class="sportsmagazine-account">
+                                        <form>
+                                            <div class="sportsmagazine-upload-photo">
+                                                <figure><img src="extra-images/upload-photo.jpg" alt=""></figure>
+                                                <section>
+                                                    <h6>Profile Photo</h6>
+                                                    <span>Minimum size 80 * 80px</span>
+                                                    <label>
+                                                        Upload Image
+                                                        <input type="file">
+                                                    </label>
+                                                </section>
+                                            </div>
+                                            <ul>
+                                                <li>
+                                                    <label>Your Email</label>
+                                                    <input value="Enter here" onblur="if(this.value == '') { this.value ='Enter here'; }" onfocus="if(this.value =='Enter here') { this.value = ''; }" type="email">
+                                                </li>
+                                                <li>
+                                                    <label>Username</label>
+                                                    <input value="Enter here" onblur="if(this.value == '') { this.value ='Enter here'; }" onfocus="if(this.value =='Enter here') { this.value = ''; }" type="text">
+                                                </li>
+                                                <li>
+                                                    <label>Password</label>
+                                                    <input value="Enter here" onblur="if(this.value == '') { this.value ='Enter here'; }" onfocus="if(this.value =='Enter here') { this.value = ''; }" type="text">
+                                                </li>
+                                                <li>
+                                                    <label>Repeat Password</label>
+                                                    <input value="Enter here" onblur="if(this.value == '') { this.value ='Enter here'; }" onfocus="if(this.value =='Enter here') { this.value = ''; }" type="text">
+                                                </li>
+                                                <li>
+                                                    <label>Nom</label>
+                                                    <input value="Enter here" onblur="if(this.value == '') { this.value ='Enter here'; }" onfocus="if(this.value =='Enter here') { this.value = ''; }" type="text">
+                                                </li>
+                                                <li>
+                                                    <label>Prénom</label>
+                                                    <input value="Enter here" onblur="if(this.value == '') { this.value ='Enter here'; }" onfocus="if(this.value =='Enter here') { this.value = ''; }" type="text">
+                                                </li>
+                                                <li>
+                                                    <label>Nationalité</label>
+                                                    <input value="Enter here" onblur="if(this.value == '') { this.value ='Enter here'; }" onfocus="if(this.value =='Enter here') { this.value = ''; }" type="text">
+                                                </li>
+                                                <li>
+                                                    <label>Numéro tel</label>
+                                                    <input value="Enter here" onblur="if(this.value == '') { this.value ='Enter here'; }" onfocus="if(this.value =='Enter here') { this.value = ''; }" type="text">
+                                                </li>
+                                                <li class="address">
+                                                    <label>Address</label>
+                                                    <input value="Enter here" onblur="if(this.value == '') { this.value ='Enter here'; }" onfocus="if(this.value =='Enter here') { this.value = ''; }" type="text">
+                                                </li>
+                                                <li>
+                                                    <input value="S'inscrire" type="submit">
+                                                </li>
+                                            </ul>
+                                        </form>
+                                    </div>
+                                </div>
+                              </div>
+                            </div>
+                            <!--// Tabs \\-->
+                        </div>
+					</div>
+				</div>
+			</div>
+			<!--// Main Section \\-->
+
+		</div>
+    
                             {% for flashError in app.flashes('verify_email_error') %}
                             <div class="alert alert-danger" role="alert">{{ flashError }}</div>
                             {% endfor %}
@@ -24,12 +139,4 @@
                                 <button type="submit" class="btn">Register</button>
                             {{ form_end(registrationForm) }}
                             
-                        </div>
-                    </div>
-            </section>
-        </div>
-    </div>
-{% endblock %}
-{% block body %}
-    
 {% endblock %}

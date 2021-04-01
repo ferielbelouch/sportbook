@@ -1,0 +1,397 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}profile{% endblock %}
+
+{% block body %}
+        <div class="sportsmagazine-main-section sportsmagazine-thumb sportsmagazine-player-thumb">
+            <span class="thumb-transparent"></span>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="sportsmagazine-player-thumb-wrap">
+                            <figure><img src="{{asset('extra-images/USM_Alger.png')}}" alt="" style="padding:15px;"></figure>
+                            <div class="sportsmagazine-player-thumb-text">
+                                <h3><span> Union Sportive Médina d'Alger</span></h3>
+                                <ul class="sportsmagazine-player-info">
+                                    <li>
+                                        <h5>Date de Création :</h5>
+                                        <span>Depuis 1937</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+		<div class="sportsmagazine-main-content">
+			<!--// Main Section \\-->
+			<div class="sportsmagazine-main-section">
+				<div class="container">
+					<div class="row">
+<!-- Listes des joueurs -->
+                        <div class="col-md-6">
+                              <!--// Fancy Title \\--> <div class="sportsmagazine-fancy-title"><h2>{{app.user.email}}</h2></div> <!--// Fancy Title \\-->
+                            <div class="sportsmagazine-player-slider">
+
+                                <div class="sportsmagazine-player-slider-image">
+                                    <div class="sportsmagazine-player-image-layer">
+                                        <img src="{{asset('extra-images/player-slider-image-1.png')}}" alt="">
+                                        <div class="sportsmagazine-player-slider-caption">
+                                            <span>97</span>
+                                            <section>
+                                                <h6><a href="fixture-detail.html">Micheal Darren</a></h6>
+                                                <small>Forword</small>
+                                            </section>
+                                        </div>
+                                    </div>
+                                    <div class="sportsmagazine-player-image-layer">
+                                        <img src="{{asset('extra-images/player-slider-image-2.png')}}" alt="">
+                                        <div class="sportsmagazine-player-slider-caption">
+                                            <span>38</span>
+                                            <section>
+                                                <h6><a href="fixture-detail.html">sarena Jordan</a></h6>
+                                                <small>Defensive</small>
+                                            </section>
+                                        </div>
+                                    </div>
+                                    <div class="sportsmagazine-player-image-layer">
+                                        <img src="{{asset('extra-images/player-slider-image-3.png')}}" alt="">
+                                        <div class="sportsmagazine-player-slider-caption">
+                                            <span>97</span>
+                                            <section>
+                                                <h6><a href="fixture-detail.html">Micheal Darren</a></h6>
+                                                <small>Forword</small>
+                                            </section>
+                                        </div>
+                                    </div>
+                                    <div class="sportsmagazine-player-image-layer">
+                                        <img src="{{asset('extra-images/player-slider-image-2.png')}}" alt="">
+                                        <div class="sportsmagazine-player-slider-caption">
+                                            <span>10</span>
+                                            <section>
+                                                <h6><a href="fixture-detail.html">Chris Marlon</a></h6>
+                                                <small>Forword</small>
+                                            </section>
+                                        </div>
+                                    </div>
+                                    <div class="sportsmagazine-player-image-layer">
+                                        <img src="{{asset('extra-images/player-slider-image-1.png')}}" alt="">
+                                        <div class="sportsmagazine-player-slider-caption">
+                                            <span>97</span>
+                                            <section>
+                                                <h6><a href="fixture-detail.html">Micheal Darren</a></h6>
+                                                <small>Forword</small>
+                                            </section>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="sportsmagazine-player-slider-nav">
+                                    <div class="sportsmagazine-player-nav-layer">
+                                        <span>09</span>
+                                        <section>
+                                            <h6>Kieron strauss</h6>
+                                            <small>Forword</small>
+                                        </section>
+                                    </div>
+                                    <div class="sportsmagazine-player-nav-layer">
+                                        <span>38</span>
+                                        <section>
+                                            <h6>sarena Jordan</h6>
+                                            <small>Defensive</small>
+                                        </section>
+                                    </div>
+                                    <div class="sportsmagazine-player-nav-layer">
+                                        <span>97</span>
+                                        <section>
+                                            <h6>Micheal Darren</h6>
+                                            <small>Forword</small>
+                                        </section>
+                                    </div>
+                                    <div class="sportsmagazine-player-nav-layer">
+                                        <span>10</span>
+                                        <section>
+                                            <h6>Chris Marlon</h6>
+                                            <small>Forword</small>
+                                        </section>
+                                    </div>
+                                    <div class="sportsmagazine-player-nav-layer">
+                                        <span>09</span>
+                                        <section>
+                                            <h6>Kieron strauss</h6>
+                                            <small>Forword</small>
+                                        </section>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+<!-- infos joueurs -->
+                        <div class="col-md-6">
+                          <div class="sportsmagazine-roster-graph sportsmagazine-overview-graph">
+                                <h4>Complete Roster</h4>
+                                <table class="sportsmagazine-client-detail">
+                                    <tr>
+                                        <th>Nom du joueur</th>
+                                        <th>Age</th>
+                                        <th>Taille</th>
+                                        <th>Poids</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Steve Masterson</td>
+                                        <td><span>28</span></td>
+                                        <td>18</td>
+                                        <td>6’4”</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Steve Masterson</td>
+                                        <td><span>28</span></td>
+                                        <td>18</td>
+                                        <td>6’4”</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Steve Masterson</td>
+                                        <td><span>28</span></td>
+                                        <td>18</td>
+                                        <td>6’4”</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Steve Masterson</td>
+                                        <td><span>28</span></td>
+                                        <td>18</td>
+                                        <td>6’4”</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Steve Masterson</td>
+                                        <td><span>28</span></td>
+                                        <td>18</td>
+                                        <td>6’4”</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Steve Masterson</td>
+                                        <td><span>28</span></td>
+                                        <td>18</td>
+                                        <td>6’4”</td>
+                                    </tr>
+                                    
+
+                                </table>
+                            </div>
+                        </div>
+<!-- latest result + next match -->
+                        <div class="sportsmagazine-main-section sportsmagazine-game-result-full">
+                            <div class="container">
+                                <div class="row">
+
+                                    <div class="col-md-6">
+                                        <div class="sportsmagazine-classic-heading"><h2>Latest Result</h2></div>
+                                        <div class="sportsmagazine-latest-result">
+                                            <div class="sportsmagazine-result-one">
+                                                <figure><img src="{{asset('extra-images/thumb-team-oneimg.png')}}" alt=""></figure>
+                                                <section>
+                                                    <h4><a href="fixture-detail.html">Yorkshire</a></h4>
+                                                    <span>03 Mark Baily (21)</span>
+                                                </section>
+                                            </div>
+                                            <div class="sportsmagazine-result-text">
+                                                <div class="sportsmagazine-match-date">
+                                                    <h4>Super Eight Match </h4>
+                                                    <time datetime="2008-02-14 20:00">Saturday, March 24th, 2016</time>
+                                                </div>
+                                                <div class="sportsmagazine-score-result">
+                                                    <h5>FINAL SCORE</h5>
+                                                    <span><i class="icon-play3"></i> 79 <small>:</small> 73</span>
+                                                </div>
+                                            </div>
+                                            <div class="sportsmagazine-result-one sportsmagazine-result-two">
+                                                <figure><img src="{{asset('extra-images/thumb-team-twoimg.png')}}" alt=""></figure>
+                                                <section>
+                                                    <h4><a href="fixture-detail.html">Yorkshire</a></h4>
+                                                    <span>03 Mark Baily (21)</span>
+                                                </section>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="sportsmagazine-classic-heading"><h2>Next Match</h2></div>
+                                        <div class="sportsmagazine-next-game">
+                                            <div class="sportsmagazine-result-one">
+                                                <figure><img src="{{asset('extra-images/next-game-img1.jpg')}}" alt=""></figure>
+                                                <section>
+                                                    <h4><a href="fixture-detail.html">Basketball </a></h4>
+                                                    <span>Sports And Magazine</span>
+                                                </section>
+                                            </div>
+                                            <div class="sportsmagazine-next-game-text">
+                                                <time datetime="2008-02-14 20:00">Saturday, May 17th, 2017 <br> <span>09:00 pm</span></time>
+                                                <span>Madison Stadium</span>
+                                            </div>
+                                            <div class="sportsmagazine-result-one sportsmagazine-result-two">
+                                                <figure><img src="{{asset('extra-images/next-game-img2.jpg')}}" alt=""></figure>
+                                                <section>
+                                                    <h4><a href="fixture-detail.html">Yorkshire</a></h4>
+                                                    <span>03 Mark Baily (21)</span>
+                                                </section>
+                                            </div>
+                                            <h6 class="game-countdown-heading">Game Countdown</h6>
+                                        </div>
+                                        <div id="sportsmagazine-game-countdown" class="sportsmagazine-game-countdown"></div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+<!-- Annonce -->
+                        <div class="sportsmagazine-main-section sportsmagazine-testimonial-full">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="sportsmagazine-fancy-title-two"><h2>Annonces <span></span></h2></div>
+                                        <div class="sportsmagazine-testimonial">
+                                            <ul class="row">
+                                                <li class="col-md-4">
+                                                    <div class="sportsmagazine-testimonial-text">
+                                                        {# <i class="fa fa-quote-left"></i> #}
+                                                        <h6> Date </h6>
+                                                        <p>Lorem ipsum dolor sit amet, consectet adipiscing elit. Vestibulum a nunc du rabitur dignissim luctus nisi id eu Morbi ePPPPt arcu dui. Proin pel Donec tincidunt </p>
+                                                        <span></span>
+                                                    </div>
+                                                </li>
+                                                <li class="col-md-4">
+                                                    <div class="sportsmagazine-testimonial-text">
+                                                       {# <i class="fa fa-quote-left"></i> #}
+                                                        <h6> Date </h6>
+                                                        <p>Lorem ipsum dolor sit amet, consectet adipiscing elit. Vestibulum a nunc du rabitur dignissim luctus nisi id eu Morbi ePPPPt arcu dui. Proin pel Donec tincidunt </p>
+                                                        <span></span>
+                                                    </div>
+                                                </li>
+                                                <li class="col-md-4">
+                                                    <div class="sportsmagazine-testimonial-text">
+                                                         {# <i class="fa fa-quote-left"></i> #}
+                                                        <h6> Date </h6>
+                                                        <p>Lorem ipsum dolor sit amet, consectet adipiscing elit. Vestibulum a nunc du rabitur dignissim luctus nisi id eu Morbi ePPPPt arcu dui. Proin pel Donec tincidunt </p>
+                                                        <span></span>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+<!-- Evenement -->
+                        <div class="sportsmagazine-main-section sportsmagazine-blogmedium-full">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="sportsmagazine-fancy-title-two"><h2> Evénements <span></span></h2></div>
+                                        <div class="sportsmagazine-blog sportsmagazine-blog-medium">
+                                            <ul class="row">
+                                                <li class="col-md-6">
+                                                    <figure><a href="blog-detail.html"><img src="{{asset('extra-images/blog-medium-img1.jpg')}}" alt=""></a></figure>
+                                                    <div class="sportsmagazine-blogmedium-text">
+                                                        <h5><a href="blog-detail.html">The summer of 2014 was understand</a></h5>
+                                                        <ul class="sportsmagazine-blogmedium-option">
+                                                            <li>
+                                                                <span>Date /</span>
+                                                                <time datetime="2008-02-14 20:00">21/11/2017</time>
+                                                            </li>
+                                                            <li>
+                                                                <span>By /</span>
+                                                                <small>Albert Martyn</small>
+                                                            </li>
+                                                        </ul>
+                                                        <p>Lorem ipsum dolor sit amet, con ctetur adipiscing elit.</p>
+                                                        <ul class="sportsmagazine-blogmedium-social">
+                                                            <li><a href="https://www.facebook.com/" class="fa fa-facebook"></a></li>
+                                                            <li><a href="https://twitter.com/login" class="fa fa-twitter"></a></li>
+                                                            <li><a href="https://plus.google.com/" class="fa fa-google-plus"></a></li>
+                                                            <li><a href="https://www.youtube.com/" class="fa fa-youtube"></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                                 <li class="col-md-6">
+                                                    <figure><a href="blog-detail.html"><img src="{{asset('extra-images/blog-medium-img1.jpg')}}" alt=""></a></figure>
+                                                    <div class="sportsmagazine-blogmedium-text">
+                                                        <h5><a href="blog-detail.html">The summer of 2014 was understand</a></h5>
+                                                        <ul class="sportsmagazine-blogmedium-option">
+                                                            <li>
+                                                                <span>Date /</span>
+                                                                <time datetime="2008-02-14 20:00">21/11/2017</time>
+                                                            </li>
+                                                            <li>
+                                                                <span>By /</span>
+                                                                <small>Albert Martyn</small>
+                                                            </li>
+                                                        </ul>
+                                                        <p>Lorem ipsum dolor sit amet, con ctetur adipiscing elit.</p>
+                                                        <ul class="sportsmagazine-blogmedium-social">
+                                                            <li><a href="https://www.facebook.com/" class="fa fa-facebook"></a></li>
+                                                            <li><a href="https://twitter.com/login" class="fa fa-twitter"></a></li>
+                                                            <li><a href="https://plus.google.com/" class="fa fa-google-plus"></a></li>
+                                                            <li><a href="https://www.youtube.com/" class="fa fa-youtube"></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                                 <li class="col-md-6">
+                                                    <figure><a href="blog-detail.html"><img src="{{asset('extra-images/blog-medium-img1.jpg')}}" alt=""></a></figure>
+                                                    <div class="sportsmagazine-blogmedium-text">
+                                                        <h5><a href="blog-detail.html">The summer of 2014 was understand</a></h5>
+                                                        <ul class="sportsmagazine-blogmedium-option">
+                                                            <li>
+                                                                <span>Date /</span>
+                                                                <time datetime="2008-02-14 20:00">21/11/2017</time>
+                                                            </li>
+                                                            <li>
+                                                                <span>By /</span>
+                                                                <small>Albert Martyn</small>
+                                                            </li>
+                                                        </ul>
+                                                        <p>Lorem ipsum dolor sit amet, con ctetur adipiscing elit.</p>
+                                                        <ul class="sportsmagazine-blogmedium-social">
+                                                            <li><a href="https://www.facebook.com/" class="fa fa-facebook"></a></li>
+                                                            <li><a href="https://twitter.com/login" class="fa fa-twitter"></a></li>
+                                                            <li><a href="https://plus.google.com/" class="fa fa-google-plus"></a></li>
+                                                            <li><a href="https://www.youtube.com/" class="fa fa-youtube"></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                                 <li class="col-md-6">
+                                                    <figure><a href="blog-detail.html"><img src="{{asset('extra-images/blog-medium-img1.jpg')}}" alt=""></a></figure>
+                                                    <div class="sportsmagazine-blogmedium-text">
+                                                        <h5><a href="blog-detail.html">The summer of 2014 was understand</a></h5>
+                                                        <ul class="sportsmagazine-blogmedium-option">
+                                                            <li>
+                                                                <span>Date /</span>
+                                                                <time datetime="2008-02-14 20:00">21/11/2017</time>
+                                                            </li>
+                                                            <li>
+                                                                <span>By /</span>
+                                                                <small>Albert Martyn</small>
+                                                            </li>
+                                                        </ul>
+                                                        <p>Lorem ipsum dolor sit amet, con ctetur adipiscing elit.</p>
+                                                        <ul class="sportsmagazine-blogmedium-social">
+                                                            <li><a href="https://www.facebook.com/" class="fa fa-facebook"></a></li>
+                                                            <li><a href="https://twitter.com/login" class="fa fa-twitter"></a></li>
+                                                            <li><a href="https://plus.google.com/" class="fa fa-google-plus"></a></li>
+                                                            <li><a href="https://www.youtube.com/" class="fa fa-youtube"></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+           
+
+{% endblock %}

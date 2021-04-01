@@ -52,15 +52,15 @@ class ConversationRepository extends ServiceEntityRepository
     public function findConversationByParticipants(int $otherUserId, int $myId)
     {
         $qb = $this->createQueryBuilder('c');
-        $qb 
+        $qb
             ->select($qb->expr()->count('p.conversation'))
             ->innerJoin('c.participants', 'p')
             ->where(
                 $qb->expr()->orX(
                     $qb->expr()->eq('p.user', ':me'),
                     $qb->expr()->eq('p.user', ':otherUser')
-                    )
                 )
+            )
             ->groupBy('p.conversation')
             ->having(
                 $qb->expr()->eq(
@@ -73,6 +73,7 @@ class ConversationRepository extends ServiceEntityRepository
                 'otherUser' => $otherUserId
             ])
         ;
+
         return $qb->getQuery()->getResult();
     }
 
@@ -80,7 +81,7 @@ class ConversationRepository extends ServiceEntityRepository
     {
         $qb = $this->createQueryBuilder('c');
         $qb->
-            select('otherUser.username', 'c.id as conversationId', 'lm.content', 'lm.createdAt')
+            select('otherUser.email', 'c.id as conversationId', 'lm.content', 'lm.createdAt')
             ->innerJoin('c.participants', 'p', Join::WITH, $qb->expr()->neq('p.user', ':user'))
             ->innerJoin('c.participants', 'me', Join::WITH, $qb->expr()->eq('me.user', ':user'))
             ->leftJoin('c.lastMessage', 'lm')
@@ -90,6 +91,7 @@ class ConversationRepository extends ServiceEntityRepository
             ->setParameter('user', $userId)
             ->orderBy('lm.createdAt', 'DESC')
         ;
+        
         return $qb->getQuery()->getResult();
     }
 

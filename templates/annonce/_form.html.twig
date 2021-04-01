@@ -1,9 +1,38 @@
-       
-       
-       
-       
-        {{ form_start(form) }}
-            {# {{ form_widget(form) }} #}
 
-            <button class="btn">{{ button_label|default('Save') }}</button>
-        {{ form_end(form) }}
+	<div class="sportsmagazine-main-content">
+		<!--// Main Section \\-->
+		<div class="sportsmagazine-main-section sportsmagazine-contactus-full">
+			<div class="container">
+				<div class="row">
+                    <div class="col-md-9">
+                            <div class="sportsmagazine-contact-form">
+                            {{form_start(form)}}
+
+                               {{ form_errors(form) }}
+                                    <ul>
+                                        <li>
+                                            <label >{{ form_label(form.title) }}</label>
+                                            <p>
+                                             {{ form_widget(form.title) }}
+                                                <span><i class="fa fa-user"></i></span>
+                                            </p>
+                                        </li>
+
+                                        <li class="full-input">
+                                            <label>{{ form_label(form.content) }}</label>
+                                            <p>
+                                                 {{ form_widget(form.content) }}
+                                                <span><i class="fa fa-comment"></i></span>
+                                            </p>
+                                        </li>
+                                        <li>
+                                          <button class="bttn">{{ button_label|default('Save') }}</button>
+                                        </li>
+                                    </ul>
+                             {{ form_end(form)}}
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

@@ -24,6 +24,7 @@ class ConversationVoter extends Voter
     protected function supports(string $attribute, $subject)
     {
         return $attribute == self::VIEW && $subject instanceof Conversation;
+        // dd($attribute, $subject);
     }
 
     protected function voteOnAttribute(string $attribute, $subject, TokenInterface $token)
@@ -32,8 +33,7 @@ class ConversationVoter extends Voter
             $subject->getId(),
             $token->getUser()->getId()
         );
-        
-        return !!$result;
 
+        return $result;
     }
 }

@@ -3,9 +3,59 @@
 {% block title %}Event index{% endblock %}
 
 {% block body %}
-    <h1>Event index</h1>
 
-    <table class="table">
+
+    <div class="sportsmagazine-main-section">
+        <div class="sportsmagazine-subheader">
+        <span class="subheader-transparent"></span>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1>Evénements</h1>
+                    </div>
+                    <div class="col-md-12">
+                        <ul class="sportsmagazine-breadcrumb">
+                            <li><a href="index.html">Accueil</a></li>
+                            <li>Evénements</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="sportsmagazine-blog sportsmagazine-blog-grid">
+            <div class="container">
+             <ul class="row">
+                {% for event in events %} 
+                 <li class="col-md-4">
+                     <figure>
+                         <a href="blog-detail.html"><img src="{{asset('extra-images/latest-blog-1.jpg')}}" alt=""></a>
+                         <figcaption>
+                             {# <span><small>{{ event.plannedOn ? event.plannedOn|date('Y-m-d H:i:s') : '' }}</small></span> #}
+                             <a href="{{ path('event_show', {'id': event.id}) }}" class="sportsmagazine-link-btn"><i class="fa fa-link"></i></a>
+                         </figcaption>
+                     </figure>
+                     <section>
+                         <h2><a href="blog-detail.html"> {{event.title}} </a></h2>
+                         {# <p> {{ event.description }} </p> #}
+                     </section>
+                     <div class="sportsmagazine-blog-grid-options">
+                         <a href="blog-detail.html" class="sportsmagazine-blog-grid-thumb"><img src="extra-images/blog-thumb-1.jpg" alt=""> {{event.user.username}}</a>
+                         <ul>
+                             {# <li><i class="fa fa-eye"></i> <a href="{{ path('event_show', {'id': event.id}) }}">Show</a></li> #}
+                             <li><i class="fa fa-pencil-square-o"></i> <a href="{{ path('event_edit', {'id': event.id}) }}">Edit</a></li>
+                             <li><i class="fa fa-trash"></i> <a href="{{path('event_delete', {'id': event.id}) }}">Delete</a></li>
+                         </ul>
+                     </div>
+                 </li>
+                 {% endfor %}
+             </ul>
+             </div>
+        </div>
+
+    </div>
+
+    {# <table class="table">
         <thead>
             <tr>
                 <th>Id</th>
@@ -37,7 +87,7 @@
             </tr>
         {% endfor %}
         </tbody>
-    </table>
+    </table> #}
 
     <a href="{{ path('event_new') }}">Create new</a>
             <div class="tm-bottom-a-box  ">

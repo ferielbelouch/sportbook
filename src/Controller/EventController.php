@@ -20,10 +20,11 @@ class EventController extends AbstractController
      */
     public function index(EventRepository $eventRepository): Response
     {
+       
         return $this->render('event/index.html.twig', [
             'events' => $eventRepository->findAll(),
         ]);
-    }
+    } 
 
     /**
      * @Route("/new", name="event_new", methods={"GET","POST"})
@@ -31,10 +32,13 @@ class EventController extends AbstractController
     public function new(Request $request): Response
     {
         $event = new Event();
+
         $form = $this->createForm(EventType::class, $event);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            $event->setUser($this->getUser());
+            $event->setCreatedAt(new \DateTime('now'));
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($event);
             $entityManager->flush();
@@ -67,6 +71,7 @@ class EventController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            $event->setCreatedAt(new \DateTime('now'));
             $this->getDoctrine()->getManager()->flush();
 
             return $this->redirectToRoute('event_index');

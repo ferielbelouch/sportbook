@@ -1,0 +1,59 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ShopController!{% endblock %}
+
+{% block body %}
+       
+	<div class="sportsmagazine-main-content">
+
+		<!--// Main Section \\-->
+		<div class="sportsmagazine-main-section sportsmagazine-shop-listfull">
+			<div class="container">
+				<div class="row">
+                    <div class="col-md-8">
+                      
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <figure class="sportsmagazine-thumb-img"><img src="{{asset('extra-images/shop-thumb-1.png')}}" alt=""></figure>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="sportsmagazine-shop-summery">
+                                        <h2>Nom de l'article</h2>
+                                        <span class="sportsmagazine-price-cartbox">
+                                            {# <del>$50.00</del> #}
+                                           Prix : $39.99
+                                        </span>
+                                        <div class="star-rating"><span class="star-rating-box" style="width:69%"></span></div>
+                                        <p>description courte : Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac malesuada ante. Cura bitur lacinia diam tempus tempor consectetur. </p>
+                                        <ul class="sportsmagazine-summery-option">
+                                            <li>
+                                                <label>Quantity</label>
+                                                <input name="quantity" min="01" max="10" type="number" value="1">
+                                            </li>
+                                            <li>
+                                                <label>Size</label>
+                                                <input name="quantity" min="5" max="40" type="number" value="5">
+                                            </li>
+                                            <li>
+                                        </ul>
+                                        <div class="clearfix"></div>
+                                        <a href="shopping-cart.html" class="sportsmagazine-banner-btn">Ajouter au panier <span></span></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sportsmagazine-section-heading"><h2>Product Description</h2></div>
+                                <div class="sportsmagazine-description">
+                                    <p>description longue: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur libero enim, lacinia finibus ante et, imperdiet finibus risus. Donec malesuada luctus elit nec hendrerit.Integer ex sapien, eleifend sit amet tellus ut, porttitor dictum velit. Nulla scelerisque, nisl eu maximus bibendum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur libero enim, lacinia finibus ante et, imperdiet finibus risus. Donec malesuada luctus elit nec hendrerit.Integer ex sapien, eleifend sit amet tellus ut, porttitor dictum velit. Nulla scelerisque,</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

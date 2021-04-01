@@ -1,0 +1,220 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ShopController!{% endblock %}
+
+{% block body %}
+        <div class="sportsmagazine-subheader">
+            <span class="subheader-transparent"></span>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1>Boutique</h1>
+                    </div>
+                    <div class="col-md-12">
+                        <ul class="sportsmagazine-breadcrumb">
+                            <li><a href="index.html">Accueil</a></li>
+                            <li>Boutique</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sportsmagazine-main-content">
+
+			<!--// Main Section \\-->
+			<div class="sportsmagazine-main-section sportsmagazine-shop-gridfull">
+				<div class="container">
+					<div class="row">
+
+                        <!--// SideBar \\-->
+                        <aside class="col-md-3">
+                            <div class="sportsmagazine-widget-heading"><h2>vêtements</h2></div>
+                            <div class="widget widget_cetagories">
+                                <ul>
+                                    <li><a href="404.html"> T-shirt</a></li>
+                                    <li><a href="404.html"> Short</a></li>
+                                    <li><a href="404.html"> Survêtements</a></li>
+                                    <li><a href="404.html"> Sweat</a></li>
+                                    <li><a href="404.html"> Veste</a></li>
+                                    <li><a href="404.html"> Pantalon</a></li>
+                                </ul>
+                            </div>
+                            <div class="sportsmagazine-widget-heading"><h2>Chaussures</h2></div>
+                            <div class="widget widget_cetagories">
+                                <ul>
+                                    <li><a href="404.html"> Baskets</a></li>
+                                    <li><a href="404.html"> Running</a></li>
+                                    <li><a href="404.html"> Football</a></li>
+                                    <li><a href="404.html"> Basketball</a></li>
+                                    <li><a href="404.html"> Handball</a></li>
+                                    <li><a href="404.html"> Volleyball</a></li>
+                                </ul>
+                            </div>
+                            <div class="sportsmagazine-widget-heading"><h2>Accessoires</h2></div>
+                            <div class="widget widget_cetagories">
+                                <ul>
+                                    <li><a href="404.html"> Chaussettes</a></li>
+                                    <li><a href="404.html"> Sac</a></li>
+                                    <li><a href="404.html"> serviette</a></li>
+                                    <li><a href="404.html"> Gants</a></li>
+                                    <li><a href="404.html"> Ballon</a></li>
+                                </ul>
+                            </div>
+                        </aside>   
+
+                        <div class="col-md-9">
+                            <div class="sportsmagazine-shop sportsmagazine-shop-grid">
+                                <ul class="row">
+                                    <li class="col-md-4">
+                                        <figure>
+                                            <a href="shop-detail.html"><img src="{{ asset('extra-images/shop-grid-img1.jpg') }}" alt=""><i class="fa fa-shopping-cart"></i></a>
+                                           
+                                        </figure>
+                                        <section>
+                                            <h5><a href="shop-detail.html">Nom de produit</a></h5>
+                                            <span class="price-cart">
+                                            {# <del>$ 30.00</del>  #}
+                                             $19.00</span>
+                                            <span></span>
+                                        </section>
+                                    </li>
+                                    <li class="col-md-4">
+                                        <figure>
+                                            <a href="shop-detail.html"><img src="{{ asset('extra-images/shop-grid-img2.jpg') }}" alt=""><i class="fa fa-shopping-cart"></i></a>
+                                           
+                                        </figure>
+                                        <section>
+                                            <h5><a href="shop-detail.html">Atlantic Sneaker</a></h5>
+                                            <span class="price-cart">$19.00</span>
+                                            <span></span>
+                                        </section>
+                                    </li>
+                                    <li class="col-md-4">
+                                        <figure>
+                                            <a href="shop-detail.html"><img src="{{ asset('extra-images/shop-grid-img3.jpg') }}" alt=""><i class="fa fa-shopping-cart"></i></a>
+                                           
+                                        </figure>
+                                        <section>
+                                            <h5><a href="shop-detail.html">Atlantic Sneaker</a></h5>
+                                            <span class="price-cart">$19.00</span>
+                                            <span></span>
+                                        </section>
+                                    </li>
+                                    <li class="col-md-4">
+                                        <figure>
+                                            <a href="shop-detail.html"><img src="{{ asset('extra-images/shop-grid-img4.jpg') }}" alt=""><i class="fa fa-shopping-cart"></i></a>
+                                           
+                                        </figure>
+                                        <section>
+                                            <h5><a href="shop-detail.html">Atlantic Sneaker</a></h5>
+                                            <span class="price-cart">$19.00</span>
+                                            <span></span>
+                                        </section>
+                                    </li>
+                                    <li class="col-md-4">
+                                        <figure>
+                                            <a href="shop-detail.html"><img src="{{ asset('extra-images/shop-grid-img5.jpg') }}" alt=""><i class="fa fa-shopping-cart"></i></a>
+                                           
+                                        </figure>
+                                        <section>
+                                            <h5><a href="shop-detail.html">Atlantic Sneaker</a></h5>
+                                            <span class="price-cart">$19.00</span>
+                                            <span></span>
+                                        </section>
+                                    </li>
+                                    <li class="col-md-4">
+                                        <figure>
+                                            <a href="shop-detail.html"><img src="{{ asset('extra-images/shop-grid-img6.jpg') }}" alt=""><i class="fa fa-shopping-cart"></i></a>
+                                           
+                                        </figure>
+                                        <section>
+                                            <h5><a href="shop-detail.html">Atlantic Sneaker</a></h5>
+                                            <span class="price-cart">$19.00</span>
+                                            <span></span>
+                                        </section>
+                                    </li>
+                                    <li class="col-md-4">
+                                        <figure>
+                                            <a href="shop-detail.html"><img src="{{ asset('extra-images/shop-grid-img7.jpg') }}" alt=""><i class="fa fa-shopping-cart"></i></a>
+                                           
+                                        </figure>
+                                        <section>
+                                            <h5><a href="shop-detail.html">Atlantic Sneaker</a></h5>
+                                            <span class="price-cart">$19.00</span>
+                                            <span></span>
+                                        </section>
+                                    </li>
+                                    <li class="col-md-4">
+                                        <figure>
+                                            <a href="shop-detail.html"><img src="{{ asset('extra-images/shop-grid-img8.jpg') }}" alt=""><i class="fa fa-shopping-cart"></i></a>
+                                           
+                                        </figure>
+                                        <section>
+                                            <h5><a href="shop-detail.html">Atlantic Sneaker</a></h5>
+                                            <span class="price-cart">$19.00</span>
+                                            <span></span>
+                                        </section>
+                                    </li>
+                                    <li class="col-md-4">
+                                        <figure>
+                                            <a href="shop-detail.html"><img src="{{ asset('extra-images/shop-grid-img2.jpg') }}" alt=""><i class="fa fa-shopping-cart"></i></a>
+                                           
+                                        </figure>
+                                        <section>
+                                            <h5><a href="shop-detail.html">Atlantic Sneaker</a></h5>
+                                            <span class="price-cart">$19.00</span>
+                                            <span></span>
+                                        </section>
+                                    </li>
+                                    <li class="col-md-4">
+                                        <figure>
+                                            <a href="shop-detail.html"><img src="{{ asset('extra-images/shop-grid-img4.jpg') }}" alt=""><i class="fa fa-shopping-cart"></i></a>
+                                           
+                                        </figure>
+                                        <section>
+                                            <h5><a href="shop-detail.html">Atlantic Sneaker</a></h5>
+                                            <span class="price-cart">$19.00</span>
+                                            <span></span>
+                                        </section>
+                                    </li>
+                                    <li class="col-md-4">
+                                        <figure>
+                                            <a href="shop-detail.html"><img src="{{ asset('extra-images/shop-grid-img5.jpg') }}" alt=""><i class="fa fa-shopping-cart"></i></a>
+                                           
+                                        </figure>
+                                        <section>
+                                            <h5><a href="shop-detail.html">Atlantic Sneaker</a></h5>
+                                            <span class="price-cart">$19.00</span>
+                                            <span></span>
+                                        </section>
+                                    </li>
+                                    <li class="col-md-4">
+                                        <figure>
+                                            <a href="shop-detail.html"><img src="{{ asset('extra-images/shop-grid-img1.jpg') }}" alt=""><i class="fa fa-shopping-cart"></i></a>
+                                           
+                                        </figure>
+                                        <section>
+                                            <h5><a href="shop-detail.html">Atlantic Sneaker</a></h5>
+                                            <span class="price-cart">$19.00</span>
+                                            <span></span>
+                                        </section>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!--// Pagination \\-->
+                            <div class="sportsmagazine-pagination">
+                              <ul class="page-numbers">
+                                 <li><a class="previous page-numbers" href="404.html"><span aria-label="Next"><i class="fa fa-angle-left"></i></span></a></li>
+                                 <li><span class="page-numbers current">1</span></li>
+                                 <li><a class="page-numbers" href="404.html">2</a></li>
+                                 <li><a class="page-numbers" href="404.html">3</a></li>
+                                 <li><a class="page-numbers" href="404.html">4</a></li>
+                                 <li><a class="next page-numbers" href="404.html"><span aria-label="Next"><i class="fa fa-angle-right"></i></span></a></li>
+                              </ul>
+                            </div>
+                            <!--// Pagination \\-->
+                        </div>                                
+                    </div>
+                </div>
+            </div>
+{% endblock %}

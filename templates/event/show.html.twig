@@ -1,102 +1,55 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}Event{% endblock %}
-{% block header %}
 
-        <div class="tm-top-a-box tm-full-width tm-box-bg-1 ">
-            <div class="uk-container uk-container-center">
-                <section id="tm-top-a" class="tm-top-a uk-grid uk-grid-collapse" data-uk-grid-match="{target:'> div > .uk-panel'}" data-uk-grid-margin="">
-                    <div class="uk-width-1-1 uk-row-first">
-                        <div class="uk-panel">
-                            <div class="uk-cover-background uk-position-relative head-wrap" style="height: 290px; background-image: url('images/head-bg.jpg');">
-                                <img class="uk-invisible" src="images/head-bg.jpg" alt="" height="290" width="1920">
-                                <div class="uk-position-cover uk-flex uk-flex-center head-title">
-                                    <h1>About</h1>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </div>
-        </div>
-
-
-
-
-{% endblock %}
 {% block body %}
-        <div class="uk-container uk-container-center alt">
-            <ul class="uk-breadcrumb">
-                <li><a href="index-2.html">Home</a>
-                </li>
-                <li class="uk-active"><span>About</span>
-                </li>
-            </ul>
-        </div>
-    <h1>Event</h1>
 
-    {# <table class="table">
-        <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ event.id }}</td>
-            </tr>
-            <tr>
-                <th>Title</th>
-                <td>{{ event.title }}</td>
-            </tr>
-            <tr>
-                <th>Description</th>
-                <td>{{ event.description }}</td>
-            </tr>
-            <tr>
-                <th>PlannedOn</th>
-                <td>{{ event.plannedOn ? event.plannedOn|date('Y-m-d H:i:s') : '' }}</td>
-            </tr>
-            <tr>
-                <th>EndAt</th>
-                <td>{{ event.endAt ? event.endAt|date('Y-m-d H:i:s') : '' }}</td>
-            </tr>
-            <tr>
-                <th>Image</th>
-                <td>{{ event.image }}</td>
-            </tr>
-        </tbody>
-    </table> #}
-        <div class="tm-bottom-a-box  ">
-            <div class="uk-container uk-container-center">
-                <section id="tm-bottom-a" class="tm-bottom-a uk-grid" data-uk-grid-match="{target:'> div > .uk-panel'}" data-uk-grid-margin="">
-                    <div class="uk-width-1-1 uk-row-first">
-                        <div class="uk-panel">
-                            <div class="about-team-page-top-wrap">
-                                <div class="uk-grid">
-                                    <div class="uk-width-large-5-10 uk-width-small-1-1 left-part">
-                                        <div class="top-title">
-                                            <h2>{{ event.title }}</h2>
-                                        </div>
-                                        <p class="sub-title">{{ event.description}} </p>
-                                    </div>
-                                    <div class="uk-width-large-5-10 uk-width-small-1-1">
-                                        <div class="top-banner uk-cover-background uk-position-relative" style="height: 420px; background-image: url('images/about-team-banner.jpg');">
-                                            <img class="uk-invisible" src="images/about-team-banner.jpg" alt="">
-                                            <div class="uk-position-cover uk-flex uk-flex-center uk-flex-middle inner">
-                                                ça commence à {{ event.plannedOn ? event.plannedOn|date('Y-m-d H:i:s') : '' }}
-                                                <br> et finit à {{ event.endAt ? event.endAt|date('Y-m-d H:i:s') : '' }} 
-                                                <div class="name">Vince Lombardi</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+		<div class="sportsmagazine-main-content sportsmagazine-main-contentminus">
+            
+            <!--// Main Section \\-->
+            <div class="sportsmagazine-main-section sportsmagazine-thumb">
+                <img src="{{asset('extra-images/blog-detail-thumb.jpg')}}" alt="">
+                <span class="thumb-transparent"></span>
+                <div class="sportsmagazine-thumb-text">
+
+                    <div class="container">
+                        <div class="row">
+
+                            <div class="col-md-12">
+                                <h2>{{ event.title}}</h2>
+                                <ul class="sportsmagazine-thumb-option">
+                                    <li><i class="fa fa-play"></i>{{ event.plannedOn ? event.plannedOn|date('Y-m-d H:i:s') : '' }}</li>
+                                     <li><i class="fa fa-hourglass-end"></i>{{ event.endAt ? event.endAt|date('Y-m-d H:i:s') : '' }}</li>
+                                    <li><i class="fa fa-user"></i> {{event.user.username}} </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+			<div class="sportsmagazine-main-section">
+				<div class="container">
+					<div class="row">
+                        <div class="sportsmagazine-post-tags">
+                            <div class="sportsmagazine-tags">
+                                <a href="{{ path('event_edit', {'id': event.id}) }}">Modifier</a>
+                                {{ include('event/_delete_form.html.twig') }}
+                         
+                            </div>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="sportsmagazine-rich-editor">
+                                <p>{{ event.description }}</p>
+                               </div>
                             </div>
                         </div>
                     </div>
-                </section>
+                </div>
             </div>
-        </div>    
-
+        </div>
+      
     <a href="{{ path('event_index') }}">back to list</a>
 
-    <a href="{{ path('event_edit', {'id': event.id}) }}">edit</a>
-
-    {{ include('event/_delete_form.html.twig') }}
+    
 {% endblock %}

@@ -1,0 +1,325 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}profile{% endblock %}
+
+{% block body %}
+        <div class="sportsmagazine-main-section sportsmagazine-thumb sportsmagazine-player-thumb">
+            <span class="thumb-transparent"></span>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="sportsmagazine-player-thumb-wrap">
+                            <figure><img src="{{asset('extra-images/player-text-img.png')}}" alt="" style="padding:15px;"></figure>
+                            <div class="sportsmagazine-player-thumb-text">
+                                    <h3>Darren <br><span> Stayen</span></h3>
+                                    <ul class="sportsmagazine-player-info">
+                                        <li>
+                                            <h5>Nationalité:</h5>
+                                            <span>Algérienne</span>
+                                        </li>
+                                        <li>
+                                            <h5>Date de naissance:</h5>
+                                            <span>August 21st 1995</span>
+                                        </li>
+                                        <li>
+                                            <h5>Club :</h5>
+                                            <span>USMA</span>
+                                        </li>
+                                        <li>
+                                            <h5>Email:</h5>
+                                            <span>mandi@gmail.com</span>
+                                        </li>
+                                        <li>
+                                            <h5>numéro de téléphone:</h5>
+                                            <span>1234567890</span>
+                                        </li>
+                                        <li>
+                                            <h5>Spécialité:</h5>
+                                            <span>Défenseur</span>
+                                        </li>
+                                    </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+		<div class="sportsmagazine-main-content">
+			<!--// Main Section \\-->
+			<div class="sportsmagazine-main-section">
+				<div class="container">
+					<div class="row">
+                        <div class="col-md-12">
+                            <div class="sportsmagazine-section-heading"><h2>Description </h2></div>
+                            <div class="sportsmagazine-rich-editor">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac malesuada ante. Curabitur lacinia diam tempus tempor consectet Sed vitae dignissim purus, eget aliquam libero. Duis et arcu a erat venenatis ornare eget nec urna. Nulla volutpat luctus venen Aliquam tellus dui, luctus nec ornare at, aliquet ac nulla. Quisque vitae feugiat eros. Pellentesque tempus tortor nec tellus elp ifend, id dictum nibh volutpat.</p>
+                                <p>Sed gravida, urna quis tempus sollicitudin, tellus urna suscipit nisl, id rhoncus ligula elit condimentum odio. Suspendisse lacinia, risus et porta dignissim, elit tellus iaculis tellus, eget efficitur elit magna eu orci. Phasellus tempor consectetur magna, at efficiat est malesuada ac. Phasellus non ipsum diam. Suspendisse potenti.</p>
+                                <blockquote>Sed gravida, urna quis tempus sollicitudin, tellus urna suscipit nisl, id rhoncus ligula elit condi Suspendisse lacinia, risus et porta dignissim, elit tellus iaculis tellus, eget efficitur elit magna ellus tempor consectetur magna.
+                                <span></span>
+                                </blockquote>
+                                <p>Sed gravida, urna quis tempus sollicitudin, tellus urna suscipit nisl, id rhoncus ligula elit condimentum  ti odio. Suspendisse lacinia risus et porta dignissim, elit tellus iaculis tellus, eget efficitur elit magna eu orci. Phasellus tempor consesactetur magna, at efficit est malesuada ac. Phasellus non ipsum diam. Suspendisse potenti.</p>                               
+                            </div>
+                            <div class="sportsmagazine-section-heading"><h2>Statistiques</h2>
+                            <button class="bttn" style="width:450px!important;"> télécharger les statistiques en pdf </button></div>
+                            <table class="sportsmagazine-client-detail">
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Versus</th>
+                                    <th>Final Score</th>
+                                    <th>BLK</th>
+                                    <th>STL</th>
+                                    <th>PF</th>
+                                    <th>TO</th>
+                                    <th>PTS</th>
+                                </tr>
+                                <tr>
+                                    <td>Mar 24, 2017</td>
+                                    <td>
+                                        <figure><img src="extra-images/player-stats-img1.jpg" alt=""></figure>
+                                        <div class="player-stats-text">
+                                            <h6>Ocean Kings</h6>
+                                            <span>Patrick’s Institute</span>
+                                        </div>
+                                    </td>
+                                    <td>113 - 110  <span>W</span></td>
+                                    <td>01</td>
+                                    <td>02</td>
+                                    <td>00</td>
+                                    <td>02</td>
+                                    <td>11</td>
+                                </tr>
+                                <tr>
+                                    <td>Mar 16, 2017</td>
+                                    <td>
+                                        <figure><img src="extra-images/player-stats-img2.jpg" alt=""></figure>
+                                        <div class="player-stats-text">
+                                            <h6>Bloody Wave</h6>
+                                            <span>Marine College</span>
+                                        </div>
+                                    </td>
+                                    <td>106 - 124<span> L</span></td>
+                                    <td>01</td>
+                                    <td>02</td>
+                                    <td>00</td>
+                                    <td>02</td>
+                                    <td>11</td>
+                                </tr>
+                                <tr>
+                                    <td>Mar 10, 2017</td>
+                                    <td>
+                                        <figure><img src="extra-images/player-stats-img3.jpg" alt=""></figure>
+                                        <div class="player-stats-text">
+                                            <h6>L.A Pirates</h6>
+                                            <span>Bebop Institute</span>
+                                        </div>
+                                    </td>
+                                    <td>95 - 102<span> L</span></td>
+                                    <td>03</td>
+                                    <td>05</td>
+                                    <td>06</td>
+                                    <td>00</td>
+                                    <td>10</td>
+                                </tr>
+                                <tr>
+                                    <td>Mar 4, 2017</td>
+                                    <td>
+                                        <figure><img src="extra-images/player-stats-img4.jpg" alt=""></figure>
+                                        <div class="player-stats-text">
+                                            <h6>Ocean Kings</h6>
+                                            <span>Icarus College</span>
+                                        </div>
+                                    </td>
+                                    <td>110 - 104  <span>W</span></td>
+                                    <td>02</td>
+                                    <td>00</td>
+                                    <td>01</td>
+                                    <td>04</td>
+                                    <td>08</td>
+                                </tr>
+                                <tr>
+                                    <td>Feb 21, 2017</td>
+                                    <td>
+                                        <figure><img src="extra-images/player-stats-img5.jpg" alt=""></figure>
+                                        <div class="player-stats-text">
+                                            <h6>Red Wings</h6>
+                                            <span>Marine College</span>
+                                        </div>
+                                    </td>
+                                    <td>113 - 107  <span>W</span></td>
+                                    <td>01</td>
+                                    <td>01</td>
+                                    <td>04</td>
+                                    <td>05</td>
+                                    <td>12</td>
+                                </tr>
+                                <tr>
+                                    <td>Feb 9, 2017</td>
+                                    <td>
+                                        <figure><img src="extra-images/player-stats-img6.jpg" alt=""></figure>
+                                        <div class="player-stats-text">
+                                            <h6>Lucky Clovers</h6>
+                                            <span>Elric Bros School</span>
+                                        </div>
+                                    </td>
+                                    <td>116 - 100  <span>W</span></td>
+                                    <td>03</td>
+                                    <td>05</td>
+                                    <td>02</td>
+                                    <td>03</td>
+                                    <td>13</td>
+                                </tr>
+                            </table>
+                        </div>
+<!-- Annonce -->
+                        <div class="sportsmagazine-main-section sportsmagazine-testimonial-full">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="sportsmagazine-fancy-title-two"><h2>Annonces <span></span></h2></div>
+                                        <div class="sportsmagazine-testimonial">
+                                            <ul class="row">
+                                                <li class="col-md-4">
+                                                    <div class="sportsmagazine-testimonial-text">
+                                                        {# <i class="fa fa-quote-left"></i> #}
+                                                        <h6> Date </h6>
+                                                        <p>Lorem ipsum dolor sit amet, consectet adipiscing elit. Vestibulum a nunc du rabitur dignissim luctus nisi id eu Morbi ePPPPt arcu dui. Proin pel Donec tincidunt </p>
+                                                        <span></span>
+                                                    </div>
+                                                </li>
+                                                <li class="col-md-4">
+                                                    <div class="sportsmagazine-testimonial-text">
+                                                       {# <i class="fa fa-quote-left"></i> #}
+                                                        <h6> Date </h6>
+                                                        <p>Lorem ipsum dolor sit amet, consectet adipiscing elit. Vestibulum a nunc du rabitur dignissim luctus nisi id eu Morbi ePPPPt arcu dui. Proin pel Donec tincidunt </p>
+                                                        <span></span>
+                                                    </div>
+                                                </li>
+                                                <li class="col-md-4">
+                                                    <div class="sportsmagazine-testimonial-text">
+                                                         {# <i class="fa fa-quote-left"></i> #}
+                                                        <h6> Date </h6>
+                                                        <p>Lorem ipsum dolor sit amet, consectet adipiscing elit. Vestibulum a nunc du rabitur dignissim luctus nisi id eu Morbi ePPPPt arcu dui. Proin pel Donec tincidunt </p>
+                                                        <span></span>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+<!-- Evenement -->
+                        <div class="sportsmagazine-main-section sportsmagazine-blogmedium-full">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="sportsmagazine-fancy-title-two"><h2> Evénements <span></span></h2></div>
+                                        <div class="sportsmagazine-blog sportsmagazine-blog-medium">
+                                            <ul class="row">
+                                                <li class="col-md-6">
+                                                    <figure><a href="blog-detail.html"><img src="{{asset('extra-images/blog-medium-img1.jpg')}}" alt=""></a></figure>
+                                                    <div class="sportsmagazine-blogmedium-text">
+                                                        <h5><a href="blog-detail.html">The summer of 2014 was understand</a></h5>
+                                                        <ul class="sportsmagazine-blogmedium-option">
+                                                            <li>
+                                                                <span>Date /</span>
+                                                                <time datetime="2008-02-14 20:00">21/11/2017</time>
+                                                            </li>
+                                                            <li>
+                                                                <span>By /</span>
+                                                                <small>Albert Martyn</small>
+                                                            </li>
+                                                        </ul>
+                                                        <p>Lorem ipsum dolor sit amet, con ctetur adipiscing elit.</p>
+                                                        <ul class="sportsmagazine-blogmedium-social">
+                                                            <li><a href="https://www.facebook.com/" class="fa fa-facebook"></a></li>
+                                                            <li><a href="https://twitter.com/login" class="fa fa-twitter"></a></li>
+                                                            <li><a href="https://plus.google.com/" class="fa fa-google-plus"></a></li>
+                                                            <li><a href="https://www.youtube.com/" class="fa fa-youtube"></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                                 <li class="col-md-6">
+                                                    <figure><a href="blog-detail.html"><img src="{{asset('extra-images/blog-medium-img1.jpg')}}" alt=""></a></figure>
+                                                    <div class="sportsmagazine-blogmedium-text">
+                                                        <h5><a href="blog-detail.html">The summer of 2014 was understand</a></h5>
+                                                        <ul class="sportsmagazine-blogmedium-option">
+                                                            <li>
+                                                                <span>Date /</span>
+                                                                <time datetime="2008-02-14 20:00">21/11/2017</time>
+                                                            </li>
+                                                            <li>
+                                                                <span>By /</span>
+                                                                <small>Albert Martyn</small>
+                                                            </li>
+                                                        </ul>
+                                                        <p>Lorem ipsum dolor sit amet, con ctetur adipiscing elit.</p>
+                                                        <ul class="sportsmagazine-blogmedium-social">
+                                                            <li><a href="https://www.facebook.com/" class="fa fa-facebook"></a></li>
+                                                            <li><a href="https://twitter.com/login" class="fa fa-twitter"></a></li>
+                                                            <li><a href="https://plus.google.com/" class="fa fa-google-plus"></a></li>
+                                                            <li><a href="https://www.youtube.com/" class="fa fa-youtube"></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                                 <li class="col-md-6">
+                                                    <figure><a href="blog-detail.html"><img src="{{asset('extra-images/blog-medium-img1.jpg')}}" alt=""></a></figure>
+                                                    <div class="sportsmagazine-blogmedium-text">
+                                                        <h5><a href="blog-detail.html">The summer of 2014 was understand</a></h5>
+                                                        <ul class="sportsmagazine-blogmedium-option">
+                                                            <li>
+                                                                <span>Date /</span>
+                                                                <time datetime="2008-02-14 20:00">21/11/2017</time>
+                                                            </li>
+                                                            <li>
+                                                                <span>By /</span>
+                                                                <small>Albert Martyn</small>
+                                                            </li>
+                                                        </ul>
+                                                        <p>Lorem ipsum dolor sit amet, con ctetur adipiscing elit.</p>
+                                                        <ul class="sportsmagazine-blogmedium-social">
+                                                            <li><a href="https://www.facebook.com/" class="fa fa-facebook"></a></li>
+                                                            <li><a href="https://twitter.com/login" class="fa fa-twitter"></a></li>
+                                                            <li><a href="https://plus.google.com/" class="fa fa-google-plus"></a></li>
+                                                            <li><a href="https://www.youtube.com/" class="fa fa-youtube"></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                                 <li class="col-md-6">
+                                                    <figure><a href="blog-detail.html"><img src="{{asset('extra-images/blog-medium-img1.jpg')}}" alt=""></a></figure>
+                                                    <div class="sportsmagazine-blogmedium-text">
+                                                        <h5><a href="blog-detail.html">The summer of 2014 was understand</a></h5>
+                                                        <ul class="sportsmagazine-blogmedium-option">
+                                                            <li>
+                                                                <span>Date /</span>
+                                                                <time datetime="2008-02-14 20:00">21/11/2017</time>
+                                                            </li>
+                                                            <li>
+                                                                <span>By /</span>
+                                                                <small>Albert Martyn</small>
+                                                            </li>
+                                                        </ul>
+                                                        <p>Lorem ipsum dolor sit amet, con ctetur adipiscing elit.</p>
+                                                        <ul class="sportsmagazine-blogmedium-social">
+                                                            <li><a href="https://www.facebook.com/" class="fa fa-facebook"></a></li>
+                                                            <li><a href="https://twitter.com/login" class="fa fa-twitter"></a></li>
+                                                            <li><a href="https://plus.google.com/" class="fa fa-google-plus"></a></li>
+                                                            <li><a href="https://www.youtube.com/" class="fa fa-youtube"></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+           
+
+{% endblock %}

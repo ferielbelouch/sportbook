@@ -15,15 +15,17 @@ class AnnonceType extends AbstractType
     {
         $builder
         ->add('title', TextType::class, [
-            'label' => false,
-            'required' => true,
-            'attr' => ['class' => 'form-control', 'placeholder' => 'titre'],
-            'row_attr' => ['class' => 'inputbox', 'id' => "user_email_formAcymailing54111"]
+            'label' => 'Title',
+            'attr' => [
+                'class' => 'title'
+            ],
         ])
         ->add('content', TextareaType::class, [
-            'label' => false,
-            'required' => true,
-            'attr' => ['class' => 'form-control', 'placeholder' => 'annonce']
+            'label' => 'Contenu',
+            'attr' => [
+                'class' => 'description',
+                'style' => 'resize:none;'
+            ],
         ])
         ;
     }

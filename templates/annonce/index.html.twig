@@ -3,49 +3,79 @@
 {% block title %}Annonce index{% endblock %}
 
 {% block body %}
-    <h1>Annonce index</h1>
 
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for annonce in annonces %}
-        <div class="tm-top-d-box">
-            <div class="uk-container uk-container-center">
-                <section id="tm-top-d" class="tm-top-d uk-grid" data-uk-grid-match="{target:'> div > .uk-panel'}" data-uk-grid-margin="">
-                    <div class="uk-width-1-1">
-                        <div class="uk-panel">
-                            <div class="donate-wrap">
-                                <div class="donate-inner">
-                                    <h3><span>{{annonce.id}}</h3>
-                                    <div class="uk-grid">
-                                        <div class="uk-width-8-10 uk-push-1-10 intro-text">
-                                            {{ annonce.content }} 
-                                        </div>
-                                    </div>
-                                    <br><br>                                   
-                                    <form action="">
-                                        <button class="donate-btn" type="submit" name="submit"><span><a href="{{ path('annonce_edit', {'id': annonce.id}) }}">Modifier</a></span> </button>
-                                        <button class="donate-btn" type="submit" name="submit"><span><a href="{{ path('annonce_delete', {'id': annonce.id}) }}">Supprimer</a></span> </button>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
+
+    <div class="sportsmagazine-main-section">
+        <div class="sportsmagazine-subheader">
+        <span class="subheader-transparent"></span>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1>ANNONCES</h1>
                     </div>
-                </section>
+                    <div class="col-md-12">
+                        <ul class="sportsmagazine-breadcrumb">
+                            <li><a href="index.html">Accueil</a></li>
+                            <li>Annonces</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
-        {% else %}
-            <tr>
-                <td colspan="2">no records found</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
+        <div class="container">
+            <div class="row">
+            
+                <div class="col-md-9" style="margin-top:50px; background-color: #ffdc11;">
+                 {% for annonce in annonces %} 
+                    <div style="background-color: #ffdc11;padding: 5px 5px;width:100%!important;">
+                        <ul class="comment-list" style="background-color:#19191b; padding: 30px 30px;">
+                            <li>
+                                <div class="thumb-list">
+                                <figure><img alt="" src="../extra-images/comment-img1.jpg"></figure>
+                                <div class="text-holder" style="text-vertical-aligh:center">
+                                <ul>
+                                    <li>
+                                        <h6>{{annonce.title}}</h6>
+                                        <p style="font-size:11px;">{{annonce.user.username}} </p>
+                                        <time class="post-date"> time </time>
+                                     </li>
+                                    <li>
+                                        <div class="sportsmagazine-post-tags">
+                                            <div class="sportsmagazine-tags">
+                                                <a href="{{ path('annonce_edit', {'id': annonce.id}) }}">Modifier</a>
+                                                <a href="{{ path('annonce_delete', {'id': annonce.id}) }}">Supprimer</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                </div>
+                                    <div class="sportsmagazine-rich-editor">
+                                        <blockquote>{{ annonce.content }}
+                                            <span></span>
+                                        </blockquote>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                     {% else %}
+                        <h3>    no records found    </h3>
+                    {% endfor %}
+                </div>
+               
+                
+                <br><br>  
+                <aside class="col-md-3" style="margin-top:50px;">
+                    <!--// Widget Add \\-->
+                        <div class="widget widget_add">
+                            <img src="{{asset('extra-images/add.jpg')}}" alt="">
+                        </div>
+                        <!--// Widget Add \\-->
+                </aside>
+            </div>
+        </div>
+    </div>
+
 
     <a href="{{ path('annonce_new') }}">Create new</a>
 {% endblock %}

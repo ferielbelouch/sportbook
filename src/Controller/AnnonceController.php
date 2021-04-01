@@ -35,6 +35,10 @@ class AnnonceController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+
+            $annonce->setUser($this->getUser());
+            $annonce->setIsVerified(false); 
+            $annonce->setCreatedAt(new \DateTime('now'));
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($annonce);
             $entityManager->flush();
@@ -67,6 +71,9 @@ class AnnonceController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            
+            $annonce->setCreatedAt(new \DateTime('now'));
+            
             $this->getDoctrine()->getManager()->flush();
 
             return $this->redirectToRoute('annonce_index');

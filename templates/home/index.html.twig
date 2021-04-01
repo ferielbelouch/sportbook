@@ -1,100 +1,364 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}Hello HomeController!{% endblock %}
-{% block header %}
-	<div class="tm-top-a-box tm-full-width  ">
-			<div class="uk-container uk-container-center">
-				<section id="tm-top-a" class="tm-top-a uk-grid uk-grid-collapse" data-uk-grid-match="{target:'> div > .uk-panel'}" data-uk-grid-margin="">
-
-					<div class="uk-width-1-1">
-						<div class="uk-panel">
-							<div class="akslider-module ">
-								<div class="uk-slidenav-position" data-uk-slideshow="{height: 'auto', animation: 'swipe', duration: '500', autoplay: false, autoplayInterval: '7000', videoautoplay: true, videomute: true, kenburns: false}">
-									<ul class="uk-slideshow uk-overlay-active">
-										<li aria-hidden="false" class="uk-height-viewport uk-active">
-											<div style="background-image: url(images/main-slider-img.jpg);" class="uk-cover-background uk-position-cover"></div><img style="width: 100%; height: auto; opacity: 0;" class="uk-invisible" src="images/main-slider-img.jpg" alt="">
-											<div class="uk-position-cover uk-flex-middle">
-												<div class="uk-container uk-container-center uk-position-cover">
-													<div class="va-promo-text uk-width-6-10 uk-push-4-10">
-														<h3>Life is
-															<span>about timing</span>
-														</h3>
-														<div class="promo-sub">Just play.
-															<span>Have fun.</span>
-															Enjoy the game</div>
-														<a href="#" class="read-more">Read More<i class="uk-icon-chevron-right"></i>
-														</a>
-													</div>
-												</div>
-											</div>
-										</li>
-										<li aria-hidden="true" class="uk-height-viewport">
-											<div style="background-image: url(images/main-slider-img1.html);" class="uk-cover-background uk-position-cover"></div><img style="width: 100%; height: auto; opacity: 0;" class="uk-invisible" src="images/main-slider-img1.jpg" alt="">
-											<div class="uk-position-cover uk-flex-middle">
-												<div class="uk-container uk-container-center uk-position-cover">
-													<div class="va-promo-text uk-width-6-10 uk-push-4-10">
-														<h3>Just play.<span>Have fun.</span>
-														</h3>
-														<div class="promo-sub">Life is
-															<span>about timing</span>
-															Enjoy the game</div>
-														<a href="#" class="read-more">Read More<i class="uk-icon-chevron-right"></i>
-														</a>
-													</div>
-												</div>
-											</div>
-										</li>
-										<li aria-hidden="true" class="uk-height-viewport">
-											<div style="background-image: url(images/main-slider-img2.html);" class="uk-cover-background uk-position-cover"></div><img style="width: 100%; height: auto; opacity: 0;" class="uk-invisible" src="images/main-slider-img2.jpg" alt="">
-											<div class="uk-position-cover uk-flex-middle">
-												<div class="uk-container uk-container-center uk-position-cover">
-													<div class="va-promo-text uk-width-6-10 uk-push-4-10">
-														<h3>Life is
-															<span>about timing</span>
-														</h3>
-														<div class="promo-sub">Just play.
-															<span>Have fun.</span>
-															Enjoy the game</div>
-														<a href="#" class="read-more">Read More<i class="uk-icon-chevron-right"></i>
-														</a>
-													</div>
-												</div>
-											</div>
-										</li>
-									</ul>
-									<a href="http://h-sportak.torbara.com/" class="uk-slidenav uk-slidenav-contrast uk-slidenav-previous" data-uk-slideshow-item="previous"></a>
-									<a href="http://h-sportak.torbara.com/" class="uk-slidenav uk-slidenav-contrast uk-slidenav-next" data-uk-slideshow-item="next"></a>
-									<ul class="uk-dotnav uk-dotnav-contrast uk-position-bottom uk-text-center">
-										<li class="uk-active" data-uk-slideshow-item="0">
-											<a href="http://h-sportak.torbara.com/">0</a>
-										</li>
-										<li data-uk-slideshow-item="1">
-											<a href="http://h-sportak.torbara.com/">1</a>
-										</li>
-										<li data-uk-slideshow-item="2">
-											<a href="http://h-sportak.torbara.com/">2</a>
-										</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
-			</div>
-		</div>{% endblock %}
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+    <div class="sportsmagazine-banner">
+        <!--// Slider \\-->
+        <div class="sportsmagazine-banner-one">
+                <div class="sportsmagazine-banner-one-layer">
+                    <img src="extra-images/banner-1.jpg" alt="">
+                    <span class="sportsmagazine-banner-pattren"></span>
+                    <div class="sportsmagazine-banner-caption">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="sportsmagazine-banner-wrap">
+                                        <h1><span>We Are</span> Developing The <strong class="sportsmagazine-color">Game</strong> <span>Be Our Partner</span></h1>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac malesuada ante Curabitur lacinia diam tempus tempor consectetur. Sed vitae dignissim purueget aliquam libero.</p>
+                                        <a href="404.html" class="sportsmagazine-banner-btn">Read More <span></span></a>
+                                    </div>
+                                    <div class="sportsmagazine-banner-thumb"> <img src="extra-images/banner-thumb-1.png" alt=""> </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sportsmagazine-banner-one-layer">
+                    <img src="extra-images/banner-2.jpg" alt="">
+                    <span class="sportsmagazine-banner-pattren"></span>
+                    <div class="sportsmagazine-banner-caption">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="sportsmagazine-banner-wrap">
+                                        <h1><span>We Are</span> Developing The <strong class="sportsmagazine-color">Soccer</strong> <span>Be Our Partner</span></h1>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac malesuada ante Curabitur lacinia diam tempus tempor consectetur. Sed vitae dignissim purueget aliquam libero.</p>
+                                        <a href="404.html" class="sportsmagazine-banner-btn">Read More <span></span></a>
+                                    </div>
+                                    <div class="sportsmagazine-banner-thumb"> <img src="extra-images/banner-thumb-1.png" alt=""> </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <!--// Slider \\-->
+    </div>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'E:/7. SYMFONY/SportBook/src/Controller/HomeController.php'|file_link(0) }}">src/Controller/HomeController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'E:/7. SYMFONY/SportBook/templates/home/index.html.twig'|file_link(0) }}">templates/home/index.html.twig</a></code></li>
-    </ul>
-</div>
+
+		<!--// Main Content \\-->
+            <div class="sportsmagazine-main-content">
+
+                <!--// Main Section \\-->
+                <div class="sportsmagazine-main-section">
+                    <div class="container">
+                        <div class="row">
+                            <!--// Fixture Slider \\-->
+	                    <div class="col-md-12">
+                            <div class="sportsmagazine-fixture-slider">
+                                
+                                <div class="sportsmagazine-fixture-slider-layer">
+                                    <time datetime="2008-02-14 20:00">August 23, 2016</time>
+                                    <ul class="sportsmagazine-bgcolor">
+                                        <li class="first-child">ARS <span>03</span></li>
+                                        <li>CHL <span>02</span></li>
+                                    </ul>
+                                </div>
+                                <div class="sportsmagazine-fixture-slider-layer">
+                                    <time datetime="2008-02-14 20:00">August 25, 2016</time>
+                                    <ul class="sportsmagazine-bgcolor">
+                                        <li class="first-child">BRC <span>05</span></li>
+                                        <li>RM <span>02</span></li>
+                                    </ul>
+                                </div>
+                                <div class="sportsmagazine-fixture-slider-layer">
+                                    <time datetime="2008-02-14 20:00">August 28, 2016</time>
+                                    <ul class="sportsmagazine-bgcolor">
+                                        <li class="first-child">CIT <span>03</span></li>
+                                        <li>KIN <span>03</span></li>
+                                    </ul>
+                                </div>
+                                <div class="sportsmagazine-fixture-slider-layer">
+                                    <time datetime="2008-02-14 20:00">August 31, 2016</time>
+                                    <ul class="sportsmagazine-bgcolor">
+                                        <li class="first-child">ST <span>00</span></li>
+                                        <li>FRA <span>01</span></li>
+                                    </ul>
+                                </div>
+                                <div class="sportsmagazine-fixture-slider-layer sportsmagazine-fixture-booked">
+                                    <time datetime="2008-02-14 20:00">September 03, 2016</time>
+                                    <ul class="sportsmagazine-bgcolor">
+                                        <li class="first-child"><small>SPA</small> VS <span>RM</span></li>
+                                        <li>Full Booked</li>
+                                    </ul>
+                                </div>
+                                <div class="sportsmagazine-fixture-slider-layer">
+                                    <time datetime="2008-02-14 20:00">September 05, 2016</time>
+                                    <ul class="sportsmagazine-bgcolor">
+                                        <li class="first-child">ARS <span>03</span></li>
+                                        <li>CHL <span>02</span></li>
+                                    </ul>
+                                </div>
+                                <div class="sportsmagazine-fixture-slider-layer sportsmagazine-fixture-booked">
+                                    <time datetime="2008-02-14 20:00">December 31, 2016</time>
+                                    <ul class="sportsmagazine-bgcolor">
+                                        <li class="first-child"><small>SPA</small> VS <span>RM</span></li>
+                                        <li>Full Booked</li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                            <!--// Fixture Slider \\-->
+
+                            <!--// Content \\-->
+                            <div class="col-md-8">
+                                
+                                <!--// Fancy Title \\--> <div class="sportsmagazine-fancy-title"><h2>Derniers Evènements</h2></div> <!--// Fancy Title \\-->
+                                <!--// Featured Slider \\-->
+                                <div class="sportsmagazine-featured-slider">
+                                {% for event in events %}
+                                    
+                               
+                                    <div class="sportsmagazine-featured-slider-layer">
+                                        <img src="{{asset('extra-images/featured-slider-1.jpg')}}" alt="">
+                                        <span class="sportsmagazine-black-transparent"></span>
+                                        <div class="sportsmagazine-featured-caption">
+                                            <h2>{{event.title}}</h2>
+                                            <span class="sportsmagazine-color">date / {{event.user.username}}</span>
+                                        </div>
+                                    </div>
+                                     {% endfor %}
+                                    {# <div class="sportsmagazine-featured-slider-layer">
+                                        <img src="extra-images/featured-slider-2.jpg" alt="">
+                                        <span class="sportsmagazine-black-transparent"></span>
+                                        <div class="sportsmagazine-featured-caption">
+                                            <h2>Fusce at molestie elit, sit amet Curabitur in tellus non risu illa vitae non nunc</h2>
+                                            <span class="sportsmagazine-color">03 December 2017 / John Maxwell</span>
+                                        </div>
+                                    </div> #}
+                                </div>
+                                <!--// Featured Slider \\-->
+
+                                <!--// Latest Match Result \\-->
+                                <div class="sportsmagazine-match-result">
+                                    <div class="sportsmagazine-match-title">
+                                        <h4>Latest Match Result</h4>
+                                        <span>Saturday, March 24th, 2016</span>
+                                    </div>
+                                    <ul>
+                                        <li>
+                                            <img src="extra-images/latest-result-logo-1.png" alt="">
+                                            <h4><a href="fixture-detail.html">Yorkshire</a></h4>
+                                            <span>03 Mark Baily (21)</span>
+                                        </li>
+                                        <li class="sportsmagazine-match-score">
+                                            <h5>FINAL SCORE</h5>
+                                            <p><strong class="sportsmagazine-color">79</strong> <small>:</small> 73</p>
+                                        </li>
+                                        <li>
+                                            <img src="extra-images/latest-result-logo-2.png" alt="">
+                                            <h4><a href="fixture-detail.html">Sharks Club</a></h4>
+                                            <span>03 Mark Baily (21)</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!--// annonces -->
+                                <figure class="sportsmagazine-add-banner">
+                                    <img src="extra-images/add-thumb-1.jpg" alt="">
+                                    <span class="sportsmagazine-add-transparent"></span>
+                                    <figcaption>
+                                    {% for annonce in annonces %}
+                                 
+                                        <div class="sportsmagazine-addbanner-caption">
+                                            <h2>{{ annonce.title }}</h2>
+                                            <p>{{annonce.content}}</p>
+                                            <a href="404.html" class="sportsmagazine-banner-btn">Read More <span></span></a>
+                                        </div>
+                                    
+                                    {% endfor %}
+                                    </figcaption>
+                                </figure>
+                            </div>
+
+                            <aside class="col-md-4">
+                                
+                                <!--// Widget TeamRanking \\-->
+                                <div class="widget widget_team_ranking">
+                                    <div class="sportsmagazine-fancy-title"><h2>Listes des Clubs</h2></div>
+                                    <div class="ranking-content-table">
+                                        <ul class="ranking-content-row">
+                                            <li>1</li>
+                                            <li> <img src="extra-images/ranking-widget-flag-1.png" alt=""> <div class="ranking-logo"><span>L.A Pirates</span> <small>Bebop Institute</small> </div> </li>
+                                            <li>08</li>
+                                            <li>08</li>
+                                            <li>16</li>
+                                        </ul>
+                                    </div>
+                                    <div class="ranking-content-table">
+                                        <ul class="ranking-content-row">
+                                            <li>2</li>
+                                            <li> <img src="extra-images/ranking-widget-flag-2.png" alt=""> <div class="ranking-logo"><span>Ocean Kings</span> <small>Icarus College</small> </div> </li>
+                                            <li>08</li>
+                                            <li>07</li>
+                                            <li>14</li>
+                                        </ul>
+                                    </div>
+                                    <div class="ranking-content-table">
+                                        <ul class="ranking-content-row">
+                                            <li>3</li>
+                                            <li> <img src="extra-images/ranking-widget-flag-3.png" alt=""> <div class="ranking-logo"><span>Red Wings</span> <small>Marine College</small> </div> </li>
+                                            <li>07</li>
+                                            <li>07</li>
+                                            <li>14</li>
+                                        </ul>
+                                    </div>
+                                    <div class="ranking-content-table">
+                                        <ul class="ranking-content-row">
+                                            <li>4</li>
+                                            <li> <img src="extra-images/ranking-widget-flag-4.png" alt=""> <div class="ranking-logo"><span>Lucky Clovers</span> <small>Elric Bros School</small> </div> </li>
+                                            <li>07</li>
+                                            <li>06</li>
+                                            <li>12</li>
+                                        </ul>
+                                    </div>
+                                    <div class="ranking-content-table">
+                                        <ul class="ranking-content-row">
+                                            <li>7</li>
+                                            <li> <img src="extra-images/ranking-widget-flag-4.png" alt=""> <div class="ranking-logo"><span>Lucky Clovers</span> <small>Elric Bros School</small> </div> </li>
+                                            <li>07</li>
+                                            <li>06</li>
+                                            <li>12</li>
+                                        </ul>
+                                    </div>
+                                    <div class="ranking-content-table">
+                                        <ul class="ranking-content-row">
+                                            <li>8</li>
+                                            <li> <img src="extra-images/ranking-widget-flag-4.png" alt=""> <div class="ranking-logo"><span>Lucky Clovers</span> <small>Elric Bros School</small> </div> </li>
+                                            <li>07</li>
+                                            <li>06</li>
+                                            <li>12</li>
+                                        </ul>
+                                    </div>
+                                    <div class="ranking-content-table">
+                                        <ul class="ranking-content-row">
+                                            <li>5</li>
+                                            <li> <img src="extra-images/ranking-widget-flag-4.png" alt=""> <div class="ranking-logo"><span>Lucky Clovers</span> <small>Elric Bros School</small> </div> </li>
+                                            <li>07</li>
+                                            <li>06</li>
+                                            <li>12</li>
+                                        </ul>
+                                    </div>
+                                    <div class="ranking-content-table">
+                                        <ul class="ranking-content-row">
+                                            <li>6</li>
+                                            <li> <img src="extra-images/ranking-widget-flag-4.png" alt=""> <div class="ranking-logo"><span>Lucky Clovers</span> <small>Elric Bros School</small> </div> </li>
+                                            <li>07</li>
+                                            <li>06</li>
+                                            <li>12</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="ranking-content-table">
+                                        <ul class="ranking-content-row">
+                                            <li>6</li>
+                                            <li> <img src="extra-images/ranking-widget-flag-4.png" alt=""> <div class="ranking-logo"><span>Lucky Clovers</span> <small>Elric Bros School</small> </div> </li>
+                                            <li>07</li>
+                                            <li>06</li>
+                                            <li>12</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="ranking-content-table">
+                                        <ul class="ranking-content-row">
+                                            <li>6</li>
+                                            <li> <img src="extra-images/ranking-widget-flag-4.png" alt=""> <div class="ranking-logo"><span>Lucky Clovers</span> <small>Elric Bros School</small> </div> </li>
+                                            <li>07</li>
+                                            <li>06</li>
+                                            <li>12</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!--// Widget TeamRanking \\-->
+
+                                <!--// Widget Next Match \\-->
+                                {# <div class="widget widget_next_match">
+                                    <div class="sportsmagazine-fancy-title"><h2>Next Match</h2></div>
+                                    <div class="widget_next_match_title">
+                                        <h5>Championship Quarter Finals</h5>
+                                        <span>Saturday, May 17th, 2017</span>
+                                    </div>
+                                    <ul>
+                                        <li>
+                                            <img src="extra-images/widget-next-match-logo-1.png" alt="">
+                                            <h6><a href="fixture-detail.html">Basketball</a></h6>
+                                            <small>Sports And Magazine</small>
+                                        </li>
+                                        <li>
+                                            <div class="widget_next_match_option">
+                                                <h6>09:00 pm</h6>
+                                                <small>Madison Stadium</small>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <img src="extra-images/widget-next-match-logo-2.png" alt="">
+                                            <h6><a href="fixture-detail.html">Combine</a></h6>
+                                            <small>ST Paddy's Institute</small>
+                                        </li>
+                                    </ul>
+                                    <div class="widget_match_countdown">
+                                        <h6>Game Countdown</h6>
+                                        <div id="sportsmagazine-countdown"></div>
+                                    </div>
+                                </div> #}
+                                <!--// Widget Next Match \\-->
+
+                                <!--// Widget Add \\-->
+                                <div class="widget widget_add">
+                                    <img src="extra-images/add.jpg" alt="">
+                                </div>
+                                <!--// Widget Add \\-->
+
+                            </aside>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="sportsmagazine-main-section sportsmagazine-counter-img">
+                    <span class="counter-transparent"></span>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12 sportsmagazine-counter-space">
+                                <div class="sportsmagazine-counter">
+                                    <div class="row counter-slider">
+                                        <div class="col-md-4">
+                                                <h4 id="word-count1">3500</h4>
+                                                <small>Team Goals</small>
+                                                <p>Praesent mattis sapien nec lorem dictum, eget euismod sem egestas. Fusce </p>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <h4 id="word-count2">124</h4>
+                                            <small>Penalty Goals</small>
+                                                <p>Praesent mattis sapien nec lorem dictum, eget euismod sem egestas. Fusce </p>
+                                        </div>
+                                        <div class="col-md-4">
+                                                <h4 id="word-count3">179</h4>
+                                                <small>Win Matches</small>
+                                                <p>Praesent mattis sapien nec lorem dictum, eget euismod sem egestas. Fusce </p>
+                                        </div>
+                                        <div class="col-md-4">
+                                                <h4 id="word-count4">179</h4>
+                                                <small>Win Matches</small>
+                                                <p>Praesent mattis sapien nec lorem dictum, eget euismod sem egestas. Fusce </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <!--// Main Content \\ -->
 {% endblock %}

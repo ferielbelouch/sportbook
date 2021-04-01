@@ -67,7 +67,7 @@ class MessageController extends AbstractController
      */
     public function index(Request $request, Conversation $conversation)
     {
-
+ 
         // Si le user connecté n'est pas un participant de la conversation, l'accès ne sera pas autorisé
         $this->denyAccessUnlessGranted('view', $conversation);
 
@@ -75,7 +75,7 @@ class MessageController extends AbstractController
             $conversation->getId()
         );
 
-        // dd($messages);
+        //  dd($messages);
         
         /**
          * @var $message Message
@@ -106,57 +106,48 @@ class MessageController extends AbstractController
      */
     public function newMessage(Request $request, Conversation $conversation, SerializerInterface $serializer)
     {
-        $user = $this->userRepository->findOneBy(['id' => 12]);
-
+        // $user = $this->getUser();
+        $user = $this->userRepository->findOneBy(['id' => 1]);
         $recipient = $this->partcipantRepository->findParticipantByConversationIdAndUserId(
             $conversation->getId(),
             $user->getId()
         );
-
-        
-        $content = $request->get('content', null);
+        $content = $request->get('content');
         $message = new Message();
         $message->setContent($content);
-        // $message->setUser($this->userRepository->findOneBy(['id' => 12]));
         $message->setUser($user);
-        // $message->setMine(true);
 
         $conversation->addMessage($message);
         $conversation->setLastMessage($message);
 
         $this->entityManager->getConnection()->beginTransaction();
-        try{
+        try {
             $this->entityManager->persist($message);
             $this->entityManager->persist($conversation);
             $this->entityManager->flush();
             $this->entityManager->commit();
-        } catch(\Exception $e) {
+        } catch (\Exception $e) {
             $this->entityManager->rollback();
             throw $e;
         }
-
-
         $message->setMine(false);
-        $messageSerialized = $serializer->Serialize($message, 'json', [
+        $messageSerialized = $serializer->serialize($message, 'json', [
             'attributes' => ['id', 'content', 'createdAt', 'mine', 'conversation' => ['id']]
         ]);
-
         $update = new Update(
             [
                 sprintf("/conversations/%s", $conversation->getId()),
                 sprintf("/conversations/%s", $recipient->getUser()->getUsername()),
             ],
             $messageSerialized,
-            sprintf("/%s", $recipient->getUser()->getUsername() ) 
+            sprintf("/%s", $recipient->getUser()->getUsername())
         );
 
         $this->publisher->__invoke($update);
+
         $message->setMine(true);
-
-
-
         return $this->json($message, Response::HTTP_CREATED, [], [
             'attributes' => self::ATTRIBUTES_TO_SERIALIZE
-        ]);    
+        ]);
     }
 }

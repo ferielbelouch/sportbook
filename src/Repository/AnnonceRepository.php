@@ -19,6 +19,18 @@ class AnnonceRepository extends ServiceEntityRepository
         parent::__construct($registry, Annonce::class);
     }
 
+
+    public function LastAnnonce()
+    {
+        return $this->createQueryBuilder('a')
+            // ->andWhere('a.exampleField = :val')
+            // ->setParameter('val', $value)
+            ->orderBy('a.createdAt', 'DESC')
+            ->setMaxResults(1)
+            ->getQuery()
+            ->getResult();
+    }
+
     // /**
     //  * @return Annonce[] Returns an array of Annonce objects
     //  */

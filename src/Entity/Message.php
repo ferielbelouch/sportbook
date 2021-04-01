@@ -27,7 +27,7 @@ class Message
     /**
      * @ORM\ManyToOne(targetEntity="User", inversedBy="messages")
      */
-    private $user; 
+    private $user;  
 
     /**
      * @ORM\ManyToOne(targetEntity="Conversation", inversedBy="messages")
